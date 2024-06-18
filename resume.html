@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="icon" type="image/x-icon" href="/public/images/android-chrome-192x192.png">
+
+    <link rel="icon" type="image/x-icon" href="/android-chrome-192x192.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Resume</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="resume1.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Resume</title>
+
+</head>
+<style>
+    body {
+        background-color: #ECE9E1;
+        font-family: var(--mdb-font-roboto);
+        line-height: 1.6;
+        color: #4f4f4f;
+        font-size: 20px;
+    }
+    
+    .myc {
+        margin-top: 5vh;
+        background-color: #ECE9E1 !important;
+        text-align: justify;
+        border: rgb(226, 221, 221) 2px solid;
+    }
+    
+    *,
+     :after,
+     :before {
+        box-sizing: border-box;
+    }
+    
+    table,
+    th,
+    td {
+        padding: 3ch;
+        font-size: 1.8ch;
+    }
+    
+    .col-6 {
+        font-size: 3ch;
+    }
+    
+    .img {
+        background-color: white;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    #app {
+        padding: 50px 0;
+    }
+    
+    .timeline {
+        margin: 50px 0;
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .timeline li {
+        transition: all 200ms ease-in;
+    }
+    
+    .timestamp {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: 100;
+    }
+    
+    .status {
+        display: flex;
+        justify-content: center;
+        border-top: 4px solid #3e70ff;
+        position: relative;
+        transition: all 200ms ease-in;
+    }
+    
+    .status span {
+        font-weight: 100;
+        padding-top: 20px;
+    }
+    
+    .status span:before {
+        content: '';
+        width: 25px;
+        height: 25px;
+        background-color: #e8eeff;
+        border-radius: 25px;
+        border: 4px solid #3e70ff;
+        position: absolute;
+        top: -15px;
+        left: calc(50% - 12px);
+        transition: all 200ms ease-in;
+    }
+    
+    .swiper-control {
+        text-align: right;
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: 250px;
+        margin: 50px 0;
+        padding: 0 0px 30px 0px;
+    }
+    
+    .swiper-slide {
+        width: 300px;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    .swiper-slide:nth-child(2n) {
+        width: 60%;
+    }
+
+    .color-container {
+        border-color: rgb(163, 163, 163);
+        background: rgb(250, 250, 250);
+    }
+
+    .project-img {
+        border-radius: 2rem;
+        width: 90%;
+        height: 90%;
+    }
+
+    .project-title {
+        margin: 1rem;
+        color: black;
+    }
+
+    .project-btn {
+        color: black;
+        border-color: rgb(163, 163, 163);
+    }
+</style>
+
+<body my>
+    <header class="bg-primary bg-gradient text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-left text-md-center mb-3">
+                    <img class="rounded-circle img-fluid" src="/public/images/sk.jpeg" alt="Profile Photo" />
+                </div>
+                <div class="col-md-9">
+                    <h2>Kashvi Panvanda</h2>
+                    <h5>FullStack Web Developer</h5>
+                    <p class="border-top pt-3">I'm Fullstack Web developer from New Delhi, India, working in web development . I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="bg-dark text-white-50 mb-5">
+        <div class="container">
+            <div class="row p-3">
+                <div class="col-md pb-2 pb-md-0">
+                    <svg width="1em" height="1.5em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+              </svg>
+                    <a href="#" class="text-white ml-2">kashvi22245@iiitd.ac.in</a>
+                </div>
+                
+                <div class="col-md text-md-right">
+                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+              </svg>
+                    <a href="#" class="text-white ml-2">+919810818109</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12  myc shadow p-5 mb-5 bg-white rounded ">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="about-section">
+
+
+                            <h2 class="h2 fw-light mb-4">About Me</h2>
+                            <p>I'm Fullstack Web developer from New Delhi, India, working in web development . I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                            <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
+                                across your message and identity in the most creative way.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="col-md-5 offset-lg-1">
+
+                            <div class="row mt-2">
+                                <h2 class="h2 fw-light mb-4">Bio</h2>
+                                <div class="col-sm-6">
+                                    <div class="pb-2 fw-bolder"><i class="far fa-calendar-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Age</div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="pb-2">20</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="pb-2">kashvi22245@iiitd.ac.in</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="pb-2 fw-bolder"><i class="fab fa-github pe-2 text-muted" style="width:24px;opacity:0.85;"></i>Github</div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="pb-2">kpanvanda</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="pb-2">+919810818109</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i>Address</div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="pb-2">Ashok Vihar, NewDelhi ,India</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12  myc shadow p-5 mb-5 bg-white rounded">
+                <h1><img src="/public/images/skills1.jpg " alt="" width="50px">SKILLS</h1>
+                <BR></BR>
+                <div class="row">
+                    <div class="col-12 col-md-5">
+
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">C++ / C</div>
+                        </div> <br><br>
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Html</div>
+                        </div> <br><br>
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">CSS</div>
+                        </div><br><br>
+
+                    </div>
+
+                    <div class="col-12 col-md-1"></div>
+
+                    <div class="col-12 col-md-5">
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">Java</div>
+                        </div><br><br>
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">Javascript</div>
+                        </div><br><br>
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="60-" aria-valuemin="0" aria-valuemax="100" style="width:60%">Python</div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12  myc shadow p-5 mb-5 bg-white rounded">
+                <h1><img src="/public/images/edu12.jpg" alt="" width="50px">Education</h1>
+                <div id="app" class="container">
+                    <div class="row">
+                        <div class="col-12-md-6">
+
+                            <div class="swiper-container">
+
+                                <div class="swiper-wrapper timeline">
+
+                                    <div class="swiper-slide">
+                                        <div class="timestamp">
+                                            <span class="date">2026<span>
+                              </div>
+                              <div class="status">
+                                <span>BTech in Computer Science and Social Sciences<br> Indraprastha Institute of Information Technology <br> current cgpa | 6.75 </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="timestamp">
+                                            <span class="date">2022<span>
+                              </div>
+                              <div class="status">
+                                <span>Higher Secondary education<br> Aadharshila Vidyapeeth ,New Delhi<br> CBSE| 96% </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="timestamp">
+                                            <span class="date"> 2020<span>
+                              </div>
+                              <div class="status">
+                                <span>Secondary education<br> Aadharshila Vidyapeeth, <br>New Delhi<br> CBSE| 94% </span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 myc shadow p-5 mb-5 bg-white rounded">
+                    <div class="row">
+                        <h1><i class="fa fa-briefcase" aria-hidden="true"></i>Work Experience</h1>
+                        <div class="col-12 col-md-6">
+
+                            <br>
+
+                            <h3>Software Assistant Intern <br> Geniemode </h3>
+                            <br>
+                            <ul>
+                                <li>I worked on frontend with the tech team of Geniemode. This internship helped me understand more about HTML , Java Script and the workings of React.</li>
+                                <li>Liaison between the software end-user and developer team.
+                                </li>
+                                <li>
+                                    Prepared software requirements and specification
+                                </li>
+
+                                <li>I cooperated with my teammates to create and provide the best possible solutions to the issues generated which helped me to understand more about coding.
+                                </li>
+                            </ul><br>
+                        </div>
+                        <div class="col-12 col-md-6">
+
+                            <br>
+
+                            <h3>Intern at Motor House India </h3>
+                            <br>
+                            <ul>
+                                <li>I worked towards managing the finances of the company. Creating Accounts and balancing all the sheets and reports really helped me improve my MS Excel, Word and other skills as well. </li>
+                                <li>I worked mainly with the finance team this helped me learn about various financing tools like busy as well.
+                                
+                            </ul><br>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 myc shadow p-3 mb-5 bg-white rounded">
+                <div class="row">
+                    <h1 class="title">Projects</h1>
+                        <div class="experience-details-container">
+                        <div class="about-containers grid-container">
+                            <div class="details-container color-container">
+                            <div class="article-container">
+                                <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+                            </div>
+                            <h2 class="experience-sub-title project-title">Stick Hero Game</h2>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/LakshayTrehan77/2022245_2022267.git'">Github</button>
+                            </div>
+                            </div>
+                            <div class="details-container color-container">
+                            <div class="article-container">
+                                <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+                            </div>
+                            <h2 class="experience-sub-title project-title">Custom Stimulator and Assembler</h2>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/kpanvanda/Co-project-2023.git'">Github</button>
+                            </div>
+                            </div>
+                            <div class="details-container color-container">
+                            <div class="article-container">
+                                <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+                            </div>
+                            <h2 class="experience-sub-title project-title">Zoo Management System</h2>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/kpanvanda/Zoo_management.git'">Github</button>
+                            </div>
+                            </div>
+                            <div class="details-container color-container">
+                            <div class="article-container">
+                                <img src="./assets/project-4.png" alt="Project 4" class="project-img" />
+                            </div>
+                            <h2 class="experience-sub-title project-title">Library Management System</h2>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/kpanvanda/Library_management.git'">Github</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h2><img src="/public/images/dec1.jpg" width="60px">DECLARTION</h2>
+    <p style="font-size: 2ch;">I, hereby, declare that the information mentioned in this document is true and to the best of my knowledge and I bear the responsibility to the correctness of above mentioned particulars.</p>
+    <footer class="bg-dark text-white-50 text-center mt-5 p-3">
+        &copy; Kashvi Panvanda - <a href="https://github.com/kpanvanda" target="_blank" class="text-white-50">GitHub</a> | <a href="https://www.linkedin.com/in/kashvi-panvanda-52562523b" target="_blank" class="text-white-50">LinkedIn</a>
+        </a>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
