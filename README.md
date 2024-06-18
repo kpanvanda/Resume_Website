@@ -6,4 +6,3 @@ Contents included in the website are:
 3. Prior Experience
 4. Projects
 5. Skills
-6. Achievements
